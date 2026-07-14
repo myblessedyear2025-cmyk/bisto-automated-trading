@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create Account | Bisto Automated Trading</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+background:#071320;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+padding:20px;
+}
+
+.container{
+width:100%;
+max-width:500px;
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(20px);
+border-radius:25px;
+padding:40px;
+box-shadow:0 0 30px rgba(42,169,255,.25);
+}
+
+.logo{
+text-align:center;
+font-size:32px;
+font-weight:700;
+color:#2aa9ff;
+margin-bottom:10px;
+}
+
+h2{
+text-align:center;
+margin-bottom:30px;
+color:white;
+}
+
+input,select{
+width:100%;
+padding:15px;
+margin-bottom:18px;
+border:none;
+outline:none;
+border-radius:12px;
+background:#102235;
+color:white;
+font-size:15px;
+}
+
+input::placeholder{
+color:#bbb;
+}
+
+label{
+color:white;
+font-size:14px;
+}
+
+button{
+width:100%;
+padding:16px;
+background:#2aa9ff;
+border:none;
+border-radius:12px;
+font-size:17px;
+font-weight:700;
+cursor:pointer;
+margin-top:20px;
+}
+
+button:hover{
+background:#1c8ee0;
+}
+
+.login{
+text-align:center;
+margin-top:20px;
+color:white;
+}
+
+.login a{
+color:#2aa9ff;
+text-decoration:none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="logo">BISTO</div>
+
+<h2>Create Your Account</h2>
+
+<form id="registerForm">
+
+<input type="text" placeholder="Full Name" required>
+
+<input type="email" placeholder="Email Address" required>
+
+<input type="tel" placeholder="Phone Number" required>
+
+<select required>
+
+<option value="">Select Country</option>
+
+<option>Nigeria</option>
+
+<option>Ghana</option>
+
+<option>South Africa</option>
+
+<option>United Kingdom</option>
+
+<option>United States</option>
+
+<option>Canada</option>
+
+</select>
+
+<input type="password" placeholder="Password" required>
+
+<input type="password" placeholder="Confirm Password" required>
+
+<input type="text" placeholder="Referral Code (Optional)">
+
+<label>
+
+<input type="checkbox" required>
+
+I agree to the Terms & Conditions
+
+</label>
+
+<button type="submit">
+
+Create Account
+
+</button>
+
+</form>
+
+<div class="login">
+
+Already have an account?
+
+<a href="login.html">
+
+Login
+
+</a>
+
+</div>
+
+</div>
+
+<script>
+
+document.getElementById("registerForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+alert("Registration page completed. Firebase integration will be added next.");
+
+});
+
+</script>
+
+</body>
+
+</html>
