@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bisto Dashboard</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
 
 <style>
 
@@ -13,146 +14,227 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Poppins,sans-serif;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#071320;
-color:white;
+background:#06121f;
+color:#fff;
 display:flex;
 }
 
 .sidebar{
-width:250px;
+width:280px;
 height:100vh;
-background:#0d1e2f;
 position:fixed;
-padding:30px 20px;
+background:#08131f;
+padding:30px;
+display:flex;
+flex-direction:column;
 }
 
 .logo{
-font-size:28px;
-font-weight:700;
-color:#2aa9ff;
+font-size:34px;
+font-weight:800;
+color:#1da1ff;
 margin-bottom:40px;
-text-align:center;
 }
 
 .sidebar a{
-display:block;
-padding:15px;
-margin:10px 0;
-border-radius:12px;
+padding:16px 20px;
+margin:8px 0;
 color:white;
 text-decoration:none;
-transition:.3s;
+border-radius:15px;
+transition:.35s;
+display:flex;
+align-items:center;
+gap:15px;
 }
 
 .sidebar a:hover{
-background:#2aa9ff;
+background:#1da1ff;
 color:#071320;
+transform:translateX(8px);
 }
 
 .main{
-margin-left:250px;
-padding:40px;
+margin-left:280px;
 width:100%;
+padding:40px;
 }
 
-.top{
+.topbar{
 display:flex;
 justify-content:space-between;
 align-items:center;
-margin-bottom:40px;
+margin-bottom:35px;
 }
 
-.user{
-font-size:18px;
+.search{
+background:#0d1d2d;
+padding:15px 20px;
+border-radius:40px;
+width:350px;
+border:none;
+color:white;
+outline:none;
+}
+
+.profile{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.avatar{
+width:50px;
+height:50px;
+border-radius:50%;
+background:#1da1ff;
+display:flex;
+justify-content:center;
+align-items:center;
+font-weight:700;
+font-size:20px;
+color:#071320;
 }
 
 .cards{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
 gap:25px;
 }
 
 .card{
-background:#102235;
-padding:25px;
-border-radius:20px;
-box-shadow:0 0 20px rgba(42,169,255,.15);
+background:#0d1d2d;
+padding:28px;
+border-radius:25px;
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 25px 50px rgba(29,161,255,.25);
 }
 
 .card h4{
-color:#2aa9ff;
-margin-bottom:10px;
+color:#8cb3d9;
+margin-bottom:15px;
 }
 
 .card h2{
 font-size:34px;
+color:#1da1ff;
 }
 
-.actions{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:20px;
+.market{
 margin-top:40px;
+background:#0d1d2d;
+border-radius:30px;
+padding:30px;
 }
 
-button{
-padding:16px;
-border:none;
-border-radius:12px;
-background:#2aa9ff;
-font-weight:700;
-cursor:pointer;
-font-size:16px;
+.market svg{
+width:100%;
+height:300px;
 }
 
-button:hover{
-background:#1d8de0;
+.graph{
+fill:none;
+stroke:#1da1ff;
+stroke-width:5;
+stroke-linecap:round;
+stroke-linejoin:round;
+stroke-dasharray:1500;
+stroke-dashoffset:1500;
+animation:draw 5s linear infinite;
+}
+
+@keyframes draw{
+
+0%{stroke-dashoffset:1500;}
+
+100%{stroke-dashoffset:0;}
+
+}
+
+.transactions{
+
+margin-top:40px;
+
+background:#0d1d2d;
+
+border-radius:30px;
+
+padding:30px;
+
 }
 
 table{
+
 width:100%;
-margin-top:40px;
+
 border-collapse:collapse;
-background:#102235;
-border-radius:20px;
-overflow:hidden;
+
 }
 
 th,td{
+
 padding:18px;
+
 text-align:left;
+
 }
 
 th{
-background:#2aa9ff;
-color:#071320;
+
+color:#1da1ff;
+
 }
 
-tr:nth-child(even){
-background:#15293f;
+tr{
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.status{
+
+padding:8px 18px;
+
+border-radius:20px;
+
+background:#00b35f;
+
+display:inline-block;
+
 }
 
 @media(max-width:900px){
 
 .sidebar{
-width:80px;
+
+width:90px;
+
 }
 
-.sidebar a{
-font-size:12px;
-padding:10px;
-}
+.sidebar span{
 
-.logo{
-font-size:18px;
+display:none;
+
 }
 
 .main{
-margin-left:80px;
+
+margin-left:90px;
+
+}
+
+.search{
+
+display:none;
+
 }
 
 }
@@ -167,25 +249,41 @@ margin-left:80px;
 
 <div class="logo">BISTO</div>
 
-<a href="#">Dashboard</a>
-<a href="#">Deposit</a>
-<a href="#">Withdraw</a>
-<a href="#">Investments</a>
-<a href="#">History</a>
-<a href="#">Profile</a>
-<a href="index.html">Logout</a>
+<a href="#"><i class="fas fa-chart-line"></i><span>Dashboard</span></a>
+
+<a href="#"><i class="fas fa-wallet"></i><span>Wallet</span></a>
+
+<a href="#"><i class="fas fa-arrow-down"></i><span>Deposit</span></a>
+
+<a href="#"><i class="fas fa-arrow-up"></i><span>Withdraw</span></a>
+
+<a href="#"><i class="fas fa-coins"></i><span>Investments</span></a>
+
+<a href="#"><i class="fas fa-clock"></i><span>History</span></a>
+
+<a href="#"><i class="fas fa-user"></i><span>Profile</span></a>
+
+<a href="index.html"><i class="fas fa-right-from-bracket"></i><span>Logout</span></a>
 
 </div>
 
 <div class="main">
 
-<div class="top">
+<div class="topbar">
 
-<h1>Dashboard</h1>
+<input class="search" placeholder="Search...">
 
-<div class="user">
+<div class="profile">
 
-Welcome, Investor 👋
+<div class="avatar">B</div>
+
+<div>
+
+<h3>Welcome Back</h3>
+
+<p>Premium Investor</p>
+
+</div>
 
 </div>
 
@@ -195,51 +293,68 @@ Welcome, Investor 👋
 
 <div class="card">
 
-<h4>Wallet Balance</h4>
+<h4>Total Balance</h4>
 
-<h2>$12,540.00</h2>
-
-</div>
-
-<div class="card">
-
-<h4>Total Profit</h4>
-
-<h2>$3,285.00</h2>
+<h2>$25,820</h2>
 
 </div>
 
 <div class="card">
 
-<h4>Active Plans</h4>
+<h4>Today's Profit</h4>
 
-<h2>3</h2>
+<h2>$1,285</h2>
 
 </div>
 
 <div class="card">
 
-<h4>Referral Bonus</h4>
+<h4>Active Investments</h4>
 
-<h2>$480.00</h2>
+<h2>7</h2>
+
+</div>
+
+<div class="card">
+
+<h4>Referral Earnings</h4>
+
+<h2>$2,540</h2>
 
 </div>
 
 </div>
 
-<div class="actions">
+<div class="market">
 
-<button>Deposit Funds</button>
+<h2 style="margin-bottom:20px;">Live Portfolio Performance</h2>
 
-<button>Withdraw</button>
+<svg viewBox="0 0 900 300">
 
-<button>Start Investment</button>
+<path class="graph"
 
-<button>Edit Profile</button>
+d="M0 260
+L70 250
+L140 235
+L210 220
+L280 180
+L350 195
+L420 150
+L490 160
+L560 110
+L630 120
+L700 70
+L770 85
+L840 30
+L900 10"/>
+
+</svg>
 
 </div>
 
-<h2 style="margin-top:50px;">Recent Transactions</h2>
+<div class="transactions">
+
+<h2 style="margin-bottom:20px;">Recent Transactions</h2>
 
 <table>
 
@@ -261,9 +376,21 @@ Welcome, Investor 👋
 
 <td>Deposit</td>
 
-<td>$500</td>
+<td>$2,000</td>
 
-<td>Completed</td>
+<td><span class="status">Completed</span></td>
+
+</tr>
+
+<tr>
+
+<td>13 Jul 2026</td>
+
+<td>Investment</td>
+
+<td>$5,000</td>
+
+<td><span class="status">Running</span></td>
 
 </tr>
 
@@ -273,25 +400,15 @@ Welcome, Investor 👋
 
 <td>Withdrawal</td>
 
-<td>$150</td>
+<td>$600</td>
 
-<td>Pending</td>
-
-</tr>
-
-<tr>
-
-<td>10 Jul 2026</td>
-
-<td>Investment</td>
-
-<td>$1000</td>
-
-<td>Running</td>
+<td><span class="status">Completed</span></td>
 
 </tr>
 
 </table>
+
+</div>
 
 </div>
 

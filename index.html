@@ -1,13 +1,23 @@
 <!DOCTYPE html>
+<html lang="en">
 
-    
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Bisto Automated Trading</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
 
-<script src="https://kit.fontawesome.com/your-kit.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 </head>
 
@@ -15,9 +25,12 @@
 
 <header>
 
-<div <div class="logo">
-    <img src="logo.svg" alt="Bisto Logo">
-</div>
+<div class="logo">
+
+<img src="logo.svg">
+
+<span>BISTO</span>
+
 </div>
 
 <nav>
@@ -28,36 +41,71 @@
 
 <a href="#plans">Plans</a>
 
+<a href="#about">About</a>
+
 <a href="#contact">Contact</a>
 
-<a href="login.html" class="login-btn">
-Login
+<a href="login.html" class="login-btn">Login</a>
 
-</a>href="register.html" class="register-btn">
-Register
-</a>
+<a href="register.html" class="register-btn">Register</a>
 
 </nav>
 
 </header>
 
+<div class="ticker">
+
+<div class="ticker-content">
+
+BTC $117,620 ▲2.7%
+
+ETH $3,810 ▲1.8%
+
+XAU/USD ▲0.84%
+
+EUR/USD ▼0.21%
+
+NASDAQ ▲1.25%
+
+S&P500 ▲0.88%
+
+BTC $117,620 ▲2.7%
+
+ETH $3,810 ▲1.8%
+
+XAU/USD ▲0.84%
+
+</div>
+
+</div>
 
 <section class="hero">
 
-<div class="hero-text">
+<div class="hero-left">
+
+<span class="badge">
+
+AI Powered Investment Platform
+
+</span>
 
 <h1>
-Trade Smarter With AI
+
+Trade Smarter.<br>
+
+Invest Better.<br>
+
+Grow Faster.
+
 </h1>
 
 <p>
 
-Powerful automated trading designed for investors who want consistent growth.
+Join thousands of investors using intelligent automation, secure asset management and professional investment strategies.
 
 </p>
 
-<div class="buttons">
-
+<div class="hero-buttons">
 
 <a href="register.html" class="primary">
 
@@ -67,74 +115,126 @@ Start Investing
 
 <a href="#plans" class="secondary">
 
-View Plans
+Investment Plans
 
-</a>
-
-</div>
-
-</div>
-
-<<div class="hero-animation">
-
-<div class="chart">
-
-<div class="line"></div>
-
-
-<section class="hero">
-
-<div class="hero-content">
-
-<span class="badge">🚀 Trusted by Investors Worldwide</span>
-
-<h1>
-AI Powered Trading.<br>
-Smarter Investing.<br>
-Bigger Results.
-</h1>
-
-<p>
-Trade Forex, Crypto and Stocks with intelligent automation, secure investments and real-time portfolio management.
-</p>
-
-<div class="hero-buttons">
-
-<a href="register.html" class="btn-primary">
-Create Account
-</a>
-
-<a href="login.html" class="btn-secondary">
-Login
 </a>
 
 </div>
 
 <div class="hero-stats">
 
-<div class="stat">
-<h3>$120M+</h3>
-<p>Assets Managed</p>
+<div>
+
+<h2>35K+</h2>
+
+<p>Investors</p>
+
 </div>
 
-<div class="stat">
-<h3>35K+</h3>
-<p>Active Investors</p>
+<div>
+
+<h2>$120M</h2>
+
+<p>Assets</p>
+
 </div>
 
-<div class="stat">
-<h3>99.99%</h3>
-<p>Platform Uptime</p>
+<div>
+
+<h2>99.99%</h2>
+
+<p>Uptime</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="market-panel">
+
+<div class="market-header">
+
+<span>BTC / USD</span>
+
+<span class="live">● LIVE</span>
+
+</div>
+
+<div class="graph">
+
+<svg viewBox="0 0 600 300">
+
+<defs>
+
+<linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+
+<stop offset="0%" stop-color="#00d4ff"/>
+
+<stop offset="100%" stop-color="#2a7bff"/>
+
+</linearGradient>
+
+</defs>
+
+<path
+class="graph-line"
+d="M0 240
+L40 225
+L80 230
+L120 190
+L160 200
+L200 165
+L240 180
+L280 120
+L320 145
+L360 90
+L400 115
+L440 70
+L480 95
+L520 55
+L560 75
+L600 20"/>
+
+</svg>
+
+</div>
+
+<div class="market-info">
+
+<div>
+
+<h4>$118,482.64</h4>
+
+<p>Bitcoin</p>
+
+</div>
+
+<div>
+
+<h4 style="color:#00ff88;">
++6.84%
+</h4>
+
+<p>Today</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </section>
-
 
 <section id="features">
 
 <h2>
 
-Why Choose Bisto?
+Why Investors Choose Bisto
 
 </h2>
 
@@ -142,23 +242,41 @@ Why Choose Bisto?
 
 <div class="card">
 
+<i class="fa-solid fa-chart-line"></i>
+
 <h3>AI Trading</h3>
 
 <p>
 
-Advanced trading algorithms.
+Advanced algorithms execute market opportunities around the clock.
 
 </p>
 
 </div>
 
 <div class="card">
+
+<i class="fa-solid fa-shield-halved"></i>
+
+<h3>Secure Platform</h3>
+
+<p>
+
+Bank-grade encryption keeps your assets and personal data protected.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-wallet"></i>
 
 <h3>Fast Withdrawals</h3>
 
 <p>
 
-Secure and instant processing.
+Quick and secure withdrawals whenever you need access to your funds.
 
 </p>
 
@@ -166,23 +284,13 @@ Secure and instant processing.
 
 <div class="card">
 
-<h3>Bank-Level Security</h3>
-
-<p>
-
-Protected with modern encryption.
-
-</p>
-
-</div>
-
-<div class="card">
+<i class="fa-solid fa-headset"></i>
 
 <h3>24/7 Support</h3>
 
 <p>
 
-Always available.
+Our dedicated support team is always available to assist you.
 
 </p>
 
@@ -190,16 +298,9 @@ Always available.
 
 </div>
 
-</section>
+</section><section id="plans">
 
-
-<section id="plans">
-
-<h2>
-
-Investment Plans
-
-</h2>
+<h2>Investment Plans</h2>
 
 <div class="pricing">
 
@@ -209,81 +310,269 @@ Investment Plans
 
 <h1>$100</h1>
 
-<p>Daily Profit 2%</p>
+<ul>
+<li>2% Daily ROI</li>
+<li>24/7 AI Trading</li>
+<li>Email Support</li>
+<li>Instant Deposit</li>
+</ul>
 
-<button>
-
-Choose Plan
-
-</button>
+<a href="register.html" class="plan-btn">
+Get Started
+</a>
 
 </div>
 
 <div class="plan popular">
 
+<span class="popular-badge">
+MOST POPULAR
+</span>
+
 <h3>Professional</h3>
 
 <h1>$500</h1>
 
-<p>Daily Profit 3.5%</p>
+<ul>
+<li>3.5% Daily ROI</li>
+<li>AI Trading Bot</li>
+<li>Priority Support</li>
+<li>Fast Withdrawals</li>
+</ul>
 
-<button>
+<a href="register.html" class="plan-btn">
 
-Choose Plan
+Invest Now
 
-</button>
+</a>
 
 </div>
 
 <div class="plan">
 
-<h3>Enterprise</h3>
+<h3>VIP</h3>
 
 <h1>$5000</h1>
 
-<p>Daily Profit 5%</p>
+<ul>
 
-<button>
+<li>5% Daily ROI</li>
 
-Choose Plan
+<li>Personal Manager</li>
 
-</button>
+<li>Premium Signals</li>
 
-</div>
+<li>VIP Support</li>
 
-</div>
+</ul>
 
-</section>
+<a href="register.html" class="plan-btn">
 
-
-<section class="cta">
-
-<h2>
-
-Start Your Investment Journey Today
-
-</h2>
-
-<a href="register.html">
-
-Create Free Account
+Join VIP
 
 </a>
 
+</div>
+
+</div>
+
 </section>
 
+<section class="stats-section">
 
-<footer id="contact">
+<div class="stat-box">
+
+<h2>35,000+</h2>
+
+<p>Registered Investors</p>
+
+</div>
+
+<div class="stat-box">
+
+<h2>$120M</h2>
+
+<p>Assets Managed</p>
+
+</div>
+
+<div class="stat-box">
+
+<h2>185</h2>
+
+<p>Countries</p>
+
+</div>
+
+<div class="stat-box">
+
+<h2>99.99%</h2>
+
+<p>Platform Uptime</p>
+
+</div>
+
+</section>
+
+<section class="testimonials">
+
+<h2>What Investors Say</h2>
+
+<div class="testimonial-grid">
+
+<div class="testimonial">
+
+★★★★★
+
+<p>
+
+Bisto has transformed how I invest. The platform is smooth, secure, and easy to use.
+
+</p>
+
+<h4>
+
+-- Michael A.
+
+</h4>
+
+</div>
+
+<div class="testimonial">
+
+★★★★★
+
+<p>
+
+Excellent returns and very professional support team.
+
+</p>
+
+<h4>
+
+-- Sarah K.
+
+</h4>
+
+</div>
+
+<div class="testimonial">
+
+★★★★★
+
+<p>
+
+The dashboard is modern and the investment process is incredibly simple.
+
+</p>
+
+<h4>
+
+-- David O.
+
+</h4>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="faq">
+
+<h2>
+
+Frequently Asked Questions
+
+</h2>
+
+<div class="faq-item">
 
 <h3>
 
-Bisto Automated Trading
+Is my investment secure?
 
 </h3>
 
 <p>
 
-Secure • Trusted • Profitable
+We use industry-standard encryption and secure account protection.
+
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+
+How fast are withdrawals?
+
+</h3>
+
+<p>
+
+Most withdrawals are processed within 24 hours.
+
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+
+Can I start with a small amount?
+
+</h3>
+
+<p>
+
+Yes. Our Starter Plan begins from $100.
+
+</p>
+
+</div>
+
+</section>
+
+<section id="contact" class="contact">
+
+<h2>
+
+Contact Us
+
+</h2>
+
+<form>
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Email Address">
+
+<textarea placeholder="Your Message"></textarea>
+
+<button>
+
+Send Message
+
+</button>
+
+</form>
+
+</section>
+
+<footer>
+
+<div class="footer-logo">
+
+BISTO
+
+</div>
+
+<p>
+
+AI Powered Investment Platform
 
 </p>
 
@@ -300,6 +589,12 @@ support@bisto.com
 </p>
 
 </footer>
+
+<a href="#" class="scroll-top">
+
+↑
+
+</a>
 
 <script src="script.js"></script>
 
