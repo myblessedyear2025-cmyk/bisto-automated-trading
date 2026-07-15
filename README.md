@@ -1,1 +1,1 @@
-# bisto-automated-trading
+# Bisto-automated-trading
