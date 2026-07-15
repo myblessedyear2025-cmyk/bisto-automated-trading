@@ -1,19 +1,17 @@
-/* ==========================================
-   BISTO AUTOMATED TRADING V3
-========================================== */
+/*====================================
+BISTO AUTOMATED TRADING V4
+====================================*/
 
 :root{
 
 --primary:#00d4ff;
 --secondary:#0077ff;
 --dark:#050914;
---surface:#111827;
---surface2:#0f1629;
---text:#ffffff;
---muted:#b8c2d6;
+--surface:#101827;
+--surface2:#162033;
+--white:#ffffff;
+--text:#cbd5e1;
 --border:rgba(255,255,255,.08);
-
---radius:22px;
 
 }
 
@@ -21,7 +19,7 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,Helvetica,sans-serif;
+font-family:'Poppins',sans-serif;
 }
 
 html{
@@ -31,28 +29,36 @@ scroll-behavior:smooth;
 body{
 
 background:
-radial-gradient(circle at top,#11204b 0%,#050914 60%);
+linear-gradient(180deg,#07111f,#050914);
 
-color:var(--text);
+color:var(--white);
+
 overflow-x:hidden;
+
 }
 
-/* HEADER */
+/*====================
+HEADER
+====================*/
 
 header{
 
 position:fixed;
+
 top:0;
 left:0;
+
 width:100%;
 
+padding:18px 8%;
+
 display:flex;
+
 justify-content:space-between;
+
 align-items:center;
 
-padding:22px 8%;
-
-background:rgba(6,12,28,.85);
+background:rgba(6,12,25,.85);
 
 backdrop-filter:blur(18px);
 
@@ -62,21 +68,22 @@ z-index:1000;
 
 }
 
-header h1{
+.logo h1{
 
-font-size:36px;
+font-size:34px;
+
 font-weight:800;
+
 color:var(--primary);
 
-letter-spacing:-1px;
+letter-spacing:2px;
 
 }
-
-/* NAVIGATION */
 
 nav{
 
 display:flex;
+
 gap:30px;
 
 }
@@ -84,30 +91,12 @@ gap:30px;
 nav a{
 
 color:white;
+
 text-decoration:none;
-font-weight:600;
 
-transition:.35s;
+font-weight:500;
 
-position:relative;
-
-}
-
-nav a::after{
-
-content:"";
-
-position:absolute;
-
-left:0;
-bottom:-8px;
-
-width:0%;
-height:2px;
-
-background:var(--primary);
-
-transition:.35s;
+transition:.3s;
 
 }
 
@@ -117,17 +106,23 @@ color:var(--primary);
 
 }
 
-nav a:hover::after{
+.menu{
 
-width:100%;
+display:none;
+
+font-size:30px;
+
+cursor:pointer;
 
 }
 
-/* HERO */
+/*====================
+HERO
+====================*/
 
 .hero{
 
-min-height:100vh;
+padding:150px 8% 100px;
 
 display:flex;
 
@@ -139,19 +134,19 @@ align-items:center;
 
 text-align:center;
 
-padding:140px 8% 80px;
+min-height:100vh;
 
 }
 
 .hero h2{
 
-font-size:clamp(42px,7vw,74px);
+font-size:clamp(42px,7vw,72px);
+
+line-height:1.1;
 
 font-weight:800;
 
 max-width:900px;
-
-line-height:1.05;
 
 margin-bottom:25px;
 
@@ -159,19 +154,17 @@ margin-bottom:25px;
 
 .hero p{
 
-max-width:720px;
+max-width:700px;
 
-font-size:21px;
+font-size:20px;
 
 line-height:1.8;
 
-color:var(--muted);
+color:var(--text);
 
 margin-bottom:45px;
 
 }
-
-/* BUTTONS */
 
 .hero-buttons{
 
@@ -185,41 +178,364 @@ justify-content:center;
 
 }
 
+/*====================
+BUTTONS
+====================*/
+
 .btn-primary,
-.btn-secondary{
+.btn-secondary,
+.plan-btn{
 
 display:inline-block;
 
-padding:18px 42px;
+padding:16px 38px;
 
 border-radius:60px;
 
 text-decoration:none;
 
-font-weight:700;
+font-weight:600;
 
 transition:.35s;
 
 }
 
-.btn-primary{
+.btn-primary,
+.plan-btn{
 
 background:linear-gradient(135deg,var(--primary),var(--secondary));
 
 color:white;
 
-box-shadow:0 20px 45px rgba(0,212,255,.35);
+box-shadow:0 15px 35px rgba(0,212,255,.35);
 
 }
 
-.btn-primary:hover{
+.btn-primary:hover,
+.plan-btn:hover{
 
-transform:translateY(-6px);
-
-box-shadow:0 25px 55px rgba(0,212,255,.5);
+transform:translateY(-5px);
 
 }
 
 .btn-secondary{
 
-border:2px solid
+border:2px solid var(--primary);
+
+color:var(--primary);
+
+}
+
+.btn-secondary:hover{
+
+background:var(--primary);
+
+color:#000;
+
+}
+
+/*====================
+SECTION
+====================*/
+
+section{
+
+padding:90px 8%;
+
+}
+
+section h2{
+
+text-align:center;
+
+font-size:42px;
+
+margin-bottom:60px;
+
+}
+
+/*====================
+GRID
+====================*/
+
+.cards,
+.hero-stats{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+
+}
+
+/*====================
+CARD
+====================*/
+
+.card{
+
+background:rgba(16,24,39,.75);
+
+border:1px solid var(--border);
+
+backdrop-filter:blur(15px);
+
+border-radius:22px;
+
+padding:35px;
+
+text-align:center;
+
+transition:.35s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+border-color:var(--primary);
+
+box-shadow:0 20px 45px rgba(0,212,255,.25);
+
+}
+
+.card i{
+
+font-size:42px;
+
+margin-bottom:20px;
+
+color:var(--primary);
+
+}
+
+.card h1{
+
+font-size:46px;
+
+margin:15px 0;
+
+color:var(--primary);
+
+}
+
+.card h3{
+
+font-size:28px;
+
+margin-bottom:15px;
+
+}
+
+.card p{
+
+color:var(--text);
+
+line-height:1.8;
+
+margin-bottom:12px;
+
+}
+
+/*====================
+STATS
+====================*/
+
+.stat{
+
+background:rgba(16,24,39,.75);
+
+padding:30px;
+
+border-radius:20px;
+
+border:1px solid var(--border);
+
+transition:.35s;
+
+}
+
+.stat:hover{
+
+transform:translateY(-8px);
+
+}
+
+.stat h3{
+
+font-size:38px;
+
+color:var(--primary);
+
+margin-bottom:10px;
+
+}
+
+.stat p{
+
+color:var(--text);
+
+}
+
+/*====================
+FEATURED PLAN
+====================*/
+
+.featured{
+
+border:2px solid var(--primary);
+
+transform:scale(1.04);
+
+}
+
+/*====================
+CONTACT
+====================*/
+
+.contact{
+
+text-align:center;
+
+}
+
+.contact p{
+
+max-width:700px;
+
+margin:0 auto 35px;
+
+color:var(--text);
+
+font-size:18px;
+
+}
+
+/*====================
+FOOTER
+====================*/
+
+footer{
+
+padding:40px;
+
+text-align:center;
+
+border-top:1px solid var(--border);
+
+color:var(--text);
+
+}
+
+/*====================
+RESPONSIVE
+====================*/
+
+@media(max-width:768px){
+
+header{
+
+padding:18px 20px;
+
+}
+
+nav{
+
+position:fixed;
+
+top:75px;
+
+left:-100%;
+
+width:100%;
+
+background:#08101f;
+
+display:flex;
+
+flex-direction:column;
+
+padding:30px;
+
+gap:20px;
+
+transition:.4s;
+
+}
+
+nav.active{
+
+left:0;
+
+}
+
+.menu{
+
+display:block;
+
+}
+
+.hero{
+
+padding:130px 25px 70px;
+
+}
+
+.hero h2{
+
+font-size:40px;
+
+}
+
+.hero p{
+
+font-size:17px;
+
+}
+
+.hero-buttons{
+
+flex-direction:column;
+
+width:100%;
+
+}
+
+.btn-primary,
+.btn-secondary,
+.plan-btn{
+
+width:100%;
+
+text-align:center;
+
+}
+
+.cards,
+.hero-stats{
+
+grid-template-columns:1fr;
+
+}
+
+section{
+
+padding:70px 25px;
+
+}
+
+section h2{
+
+font-size:32px;
+
+}
+
+.logo h1{
+
+font-size:28px;
+
+}
+
+}
