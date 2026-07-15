@@ -1,13 +1,11 @@
-:root{
-
---primary:#0F4C81;
---secondary:#2F6FA5;
---green:#5E8B7E;
---accent:#4FAF7C;
---dark:#2D3436;
---light:#F7F9FC;
---grey:#E8ECEF;
---white:#ffffff;
+::root{
+--bg:#050B14;
+--card:#0C1624;
+--card2:#101F32;
+--blue:#1E88E5;
+--green:#18C77A;
+--text:#FFFFFF;
+--grey:#9AA8B7;
 
 }
 
