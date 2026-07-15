@@ -443,4 +443,34 @@ color:#fff;
 
 font-size:16px;
 
+}.hero-content{
+    max-width:600px;
+    padding-top:80px;
+    text-align:left;
+}
+
+.hero-title{
+    font-size:70px;
+    font-weight:800;
+    line-height:1;
+    margin-bottom:15px;
+    color:#fff;
+}
+
+.hero-title span{
+    color:#1e90ff;
+}
+
+.hero-subtitle{
+    font-size:22px;
+    color:#1e90ff;
+    margin-bottom:20px;
+    letter-spacing:3px;
+}
+
+.hero-text{
+    font-size:20px;
+    line-height:1.7;
+    color:#d7d7d7;
+    max-width:520px;
 }
