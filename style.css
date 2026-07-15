@@ -619,4 +619,25 @@
         font-size:11px;
         letter-spacing:3px;
         color:#fff;
+    }/* ===== MOBILE FIX ===== */
+@media (max-width:768px){
+
+    .hero-stats{
+        display:grid;
+        grid-template-columns:repeat(2,1fr);
+        gap:15px;
     }
+
+    .stat{
+        padding:20px 15px;
+    }
+
+    .stat h3{
+        font-size:30px;
+    }
+
+    .stat p{
+        font-size:15px;
+    }
+
+}
