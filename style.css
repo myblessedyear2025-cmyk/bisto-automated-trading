@@ -571,4 +571,105 @@ transform:translateY(0);
     .logo img{
         height:42px;
     }
+}/* =========================
+   BISTO LOGO
+========================= */
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-icon{
+    position:relative;
+    width:46px;
+    height:46px;
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-evenly;
+    padding:8px;
+    border-radius:12px;
+    background:linear-gradient(135deg,#00d4ff,#0077ff);
+    box-shadow:0 8px 25px rgba(0,212,255,.35);
+}
+
+.bar{
+    width:6px;
+    background:#fff;
+    border-radius:4px;
+}
+
+.bar:nth-child(1){
+    height:12px;
+}
+
+.bar:nth-child(2){
+    height:20px;
+}
+
+.bar:nth-child(3){
+    height:28px;
+}
+
+.arrow{
+    position:absolute;
+    width:22px;
+    height:4px;
+    background:#fff;
+    top:18px;
+    left:15px;
+    transform:rotate(-35deg);
+    border-radius:4px;
+}
+
+.arrow::after{
+    content:"";
+    position:absolute;
+    right:-4px;
+    top:-4px;
+    border-left:8px solid #fff;
+    border-top:6px solid transparent;
+    border-bottom:6px solid transparent;
+}
+
+.logo-text{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.logo-text h1{
+    margin:0;
+    font-size:30px;
+    font-weight:800;
+    color:#00d4ff;
+    line-height:1;
+    letter-spacing:1px;
+}
+
+.logo-text p{
+    margin:4px 0 0;
+    font-size:11px;
+    color:#ffffff;
+    letter-spacing:3px;
+    font-weight:600;
+}
+
+@media (max-width:768px){
+
+.logo-icon{
+    width:40px;
+    height:40px;
+}
+
+.logo-text h1{
+    font-size:22px;
+}
+
+.logo-text p{
+    font-size:9px;
+    letter-spacing:2px;
+}
+
 }
