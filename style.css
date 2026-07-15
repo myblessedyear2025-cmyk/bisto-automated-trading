@@ -231,6 +231,16 @@ width:320px;
 
 .logo img{
     height:60px;
-    width:auto;
+    width:auto; 
+    display:block;
+}
+.logo{
+    display:flex;
+    align-items:center;
+}
+
+.logo img{
+    width:70px;
+    height:70px;
     display:block;
 }
