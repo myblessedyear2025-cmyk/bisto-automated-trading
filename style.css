@@ -655,21 +655,43 @@ transform:translateY(0);
     letter-spacing:3px;
     font-weight:600;
 }
-
-@media (max-width:768px){
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
 
 .logo-icon{
-    width:40px;
-    height:40px;
+    width:45px;
+    height:45px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:#00d4ff;
+    font-size:28px;
+
+    flex-shrink:0;
+}
+
+.logo-text{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
 }
 
 .logo-text h1{
-    font-size:22px;
+    margin:0;
+    font-size:30px;
+    font-weight:800;
+    color:#00d4ff;
+    line-height:1;
 }
 
 .logo-text p{
-    font-size:9px;
-    letter-spacing:2px;
-}
-
+    margin:2px 0 0;
+    font-size:11px;
+    letter-spacing:3px;
+    color:#fff;
 }
