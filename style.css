@@ -185,6 +185,18 @@ nav{
 
 .hero h1{
     font-size:40px;
+}body{
+    background:#050505 !important;
+    color:white !important;
 }
 
+.hero h1{
+    color:#00ff99 !important;
+    background:none !important;
+}
+
+.card{
+    background:#111 !important;
+    color:white !important;
+    border:1px solid #00ff99 !important;
 }
