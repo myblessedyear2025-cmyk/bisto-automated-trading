@@ -227,4 +227,10 @@ margin-top:40px;
 width:320px;
 }
 
+}/* Logo */
+
+.logo img{
+    height:60px;
+    width:auto;
+    display:block;
 }
